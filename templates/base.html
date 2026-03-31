@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}Projeto{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+    <header class="bg-white border-bottom shadow-sm mb-4">
+        <nav class="navbar navbar-expand-lg container my-1">
+            <a class="navbar-brand fw-bold text-primary" href="#">Reddit Clone</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="nav">
+                <form class="d-flex ms-auto me-2">
+                    <input class="form-control me-2" type="search" placeholder="Buscar post...">
+                    <button class="btn btn-outline-primary">Buscar</button>
+                </form>
+                <button class="btn btn-success">Login</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-4 flex-grow-1">
+        <div class="row">
+            {% block conteudo %}{% endblock %}
+        </div>
+    </main>
+
+    <footer class="bg-white border-top text-center py-3 mt-auto">
+        <small class="text-muted">© 2026 Reddit Clone - Todos os direitos reservados</small>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')  }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
