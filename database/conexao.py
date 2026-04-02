@@ -1,13 +1,13 @@
 from mysql.connector import connect
 
-def obter_conexao():
-    try:
-        config = {
-            "host": "",
-            "database": "",
-            "user": "",
-            "password": ""
+class Conexao:
+    def __init__(self):
+        self.config = {
+            "host": "localhost",
+            "user": "root",
+            "password": "",
+            "database": "mysql_reddit",
         }
-        return connect(**config)
-    except Exception as error:
-        print("Erro ao conectar com o banco de dados!", error)
+    
+    def obter_conexao(self):
+        return connect(**self.config)
