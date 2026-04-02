@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block titulo %}Feed{% endblock %}
+
+{% block conteudo %}
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Título do post</h5>
+                <p class="card-text text-muted small">postado por u/usuario • 2h atrás</p>
+                <p class="card-text">Conteúdo do post aqui...</p>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-danger btn-sm d-flex align-items-center">
+                        ❤️ Curtir
+                    </button>
+                    <button class="btn btn-outline-secondary btn-sm">
+                        Comentários
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h6 class="fw-bold">Sobre</h6>
+                <p class="small text-muted">Comunidade para discutir qualquer coisa.</p>
+                <button class="btn btn-primary w-100">Criar Post</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h6 class="fw-bold">Comunidades</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="#" class="text-decoration-none">r/programacao</a></li>
+                    <li><a href="#" class="text-decoration-none">r/tecnologia</a></li>
+                    <li><a href="#" class="text-decoration-none">r/games</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
